@@ -1,0 +1,22 @@
+{
+  "name": "projeto-api-clima",
+  "version": "1.0.0",
+  "description": "Projeto em grupo para consumo de uma API climática.\r Precisa usar npm install para baixar as dependências",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RachMor/projeto-api-clima.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RachMor/projeto-api-clima/issues"
+  },
+  "homepage": "https://github.com/RachMor/projeto-api-clima#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}
