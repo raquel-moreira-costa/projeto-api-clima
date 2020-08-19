@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
     <title>API - Clima</title>
 </head>
 <body>
-    <div class="container">
-        <h1>API - Clima</h1>
-    <select class="custom-select custom-select-lg mb-3">
-        <option selected>Selecione o estado...</option>
-        <option value="1">São Paulo</option>
-        <option value="2">Rio de Janeiro</option>
-        <option value="3">Curitiba</option>
-      </select>
-      
-      <div class="card-1">
-          <figure></figure>
-          <figcaption></figcaption>
-      </div>
-
-    </div>
-
-<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
+    <header class="p-4 bg-dark">
+        <h1 class="text-white text-center">API - Clima</h1>
+    </header>
+    <main class="container mt-5 pt-5">
+        <div class="row flex-column align-items-center">
+            <form class="col-sm-6 col-9">
+                <div class="from-group">
+                    <select class="form-control">
+                        <option selected>Selecione o estado...</option>
+                        <option value="1">São Paulo</option>
+                        <option value="2">Rio de Janeiro</option>
+                        <option value="3">Curitiba</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
