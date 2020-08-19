@@ -10,10 +10,12 @@
     <title>API - Clima</title>
 </head>
 <body>
-    <header class="p-4 bg-dark">
-        <h1 class="text-white text-center">API - Clima</h1>
+    <header class="p-2 bg-dark">
+        <h1 class="h1 text-white text-center">API - Clima</h1>
     </header>
+    
     <main class="container mt-5 pt-5">
+        
         <div class="row flex-column align-items-center">
             <form class="col-sm-6 col-9">
                 <div class="from-group">
@@ -25,7 +27,45 @@
                     </select>
                 </div>
             </form>
+            
+            <div class="row col-12 align-items-end mt-5 pt-5">
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3">
+                    <div class="rounded p-2 bg-dark text-white text-center" data-temperatura="card" data-prev="1">
+                        <span data-temperatura="data">20/08</span>
+                        <h2 class="h1" data-temperatura="temp">
+                            <img src="img/icone-temp.svg" alt="Icone temp">
+                            <span>25 ºC</span>
+                        </h2>
+                        <span data-temperatura="vento">Vento: 20 km/h</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-9 col-12 order-lg-0 order-0 mb-3">
+                    <div class="rounded p-2 bg-dark text-white text-center" data-temperatura="card">
+                        <span data-temperatura="data">20/08</span>
+                        <h1 data-temperatura="temp">
+                            <img src="img/icone-temp.svg" alt="Icone temp">
+                            <span>25 ºC</span>
+                        </h1>
+                        <span data-temperatura="descri">Nublado</span>
+                        <span data-temperatura="vento">20 km/h</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-1 mb-3">
+                    <div class="rounded p-2 bg-dark text-white text-center" data-temperatura="card" data-prev="0">
+                        <span class="mt-4" data-temperatura="data">20/08</span>
+                        <h2 class="h1" data-temperatura="temp">
+                            <img src="img/icone-temp.svg" alt="Icone temp">
+                            <span>25 ºC</span>
+                        </h2>
+                        <span data-temperatura="vento">Vento: 20 km/h</span>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+        
     </main>
 </body>
 </html>
