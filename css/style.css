@@ -123,3 +123,14 @@ header h1 {
 [data-animacao="barrinha"] + [data-animacao="barrinha"] {
     margin-left: 20px;
 }
+
+footer li span::after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    margin: 10px auto;
+    background-color: currentColor;
+    display: block;
+}
+
+

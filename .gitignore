@@ -1,3 +1,16 @@
-node_modules
+node_modules/bootstrap/js
+node_modules/bootstrap/scss
+node_modules/bootstrap/dist/js
+node_modules/bootstrap/dist/css/bootstrap.css
+node_modules/bootstrap/dist/css/bootstrap-grid.css
+node_modules/bootstrap/dist/css/bootstrap-grid.css.map
+node_modules/bootstrap/dist/css/bootstrap-grid.min.css
+node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map
+node_modules/bootstrap/dist/css/bootstrap-reboot.css
+node_modules/bootstrap/dist/css/bootstrap-reboot.css.map
+node_modules/bootstrap/dist/css/bootstrap-reboot.min.css
+node_modules/bootstrap/dist/css/bootstrap-reboot.min.css.map
+node_modules/bootstrap/dist/css/bootstrap.css.map
+node_modules/bootstrap/dist/css/bootstrap.min.css.map
 .vscode
 package-lock.json
