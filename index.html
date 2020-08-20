@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
     <title>API - Clima</title>
 </head>
-<body>
-    <header class="p-2 bg-dark">
+<body class="quente frio">
+    <header class="p-2 cor-fundo sombra">
         <h1 class="h1 text-white text-center">API - Clima</h1>
     </header>
     
@@ -19,7 +20,7 @@
         <div class="row flex-column align-items-center">
             <form class="col-sm-6 col-9">
                 <div class="from-group">
-                    <select class="form-control">
+                    <select class="form-control sombra">
                         <option selected>Selecione o estado...</option>
                         <option value="1">São Paulo</option>
                         <option value="2">Rio de Janeiro</option>
@@ -28,36 +29,36 @@
                 </div>
             </form>
             
-            <div class="row col-12 align-items-end mt-5 pt-5">
-                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3">
-                    <div class="rounded p-2 bg-dark text-white text-center" data-temperatura="card" data-prev="1">
-                        <span data-temperatura="data">20/08</span>
-                        <h2 class="h1" data-temperatura="temp">
+            <div class="row col-12 align-items-end mt-5 pt-5 centralizar">
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3 centralizar ">
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="1">
+                        <span class="my-2" data-temperatura="data">20/08</span>
+                        <h2 class="h1 centralizar">
                             <img src="img/icone-temp.svg" alt="Icone temp">
-                            <span>25 ºC</span>
+                            <span data-temperatura="temp">25 ºC</span>
                         </h2>
                         <span data-temperatura="vento">Vento: 20 km/h</span>
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-9 col-12 order-lg-0 order-0 mb-3">
-                    <div class="rounded p-2 bg-dark text-white text-center" data-temperatura="card">
-                        <span data-temperatura="data">20/08</span>
-                        <h1 data-temperatura="temp">
+                <div class="col-lg-4 col-md-9 col-12 order-lg-0 order-0 mb-3 centralizar ">
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card">
+                        <span class="my-2" data-temperatura="data">20/08</span>
+                        <h1 class= "h1 centralizar" >
                             <img src="img/icone-temp.svg" alt="Icone temp">
-                            <span>25 ºC</span>
+                            <span data-temperatura="temp">25 ºC</span>
                         </h1>
                         <span data-temperatura="descri">Nublado</span>
                         <span data-temperatura="vento">20 km/h</span>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-1 mb-3">
-                    <div class="rounded p-2 bg-dark text-white text-center" data-temperatura="card" data-prev="0">
-                        <span class="mt-4" data-temperatura="data">20/08</span>
-                        <h2 class="h1" data-temperatura="temp">
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-1 mb-3 centralizar ">
+                    <div class="rounded p-4  text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="0">
+                        <span class="my-lg-3 my-2" data-temperatura="data">20/08</span>
+                        <h2 class="h1 centralizar">
                             <img src="img/icone-temp.svg" alt="Icone temp">
-                            <span>25 ºC</span>
+                            <span data-temperatura="temp">25 ºC</span>
                         </h2>
                         <span data-temperatura="vento">Vento: 20 km/h</span>
                     </div>

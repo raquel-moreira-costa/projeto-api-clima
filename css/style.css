@@ -1,0 +1,55 @@
+body{
+    min-height: 100vh;
+    background-color: #222233;
+
+}
+.quente{
+    background-image: linear-gradient(to bottom,#ff0022, #ff6622)
+}
+
+.frio{
+    background-image: linear-gradient(to bottom,#0022ff, #00ffdd)
+}
+
+.centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[data-temperatura ="card"]{
+    position: relative;
+    width: 280px;
+    border: 2px solid;
+}
+
+header h1{
+    text-transform: capitalize;
+}
+
+
+.cor-fundo{
+    background-color: rgba(42,42,42, 0.6);
+}
+
+.sombra{
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+[data-temperatura="temp"]{
+    margin-left: 20px;
+}
+
+[data-temperatura ="card"] > span{
+    display: block;
+    font-size: 24px;
+
+}
+
+[data-temperatura="vento"]::before, [data-temperatura="descri"]::before{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: currentColor;
+    margin: 32px auto;
+}
