@@ -2,6 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="API - Clima">
+    <meta property="og:description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -9,10 +12,12 @@
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
     <title>API - Clima</title>
+    <meta name="description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
+
 </head>
 <body>
     <header class="p-2 cor-fundo sombra">
-        <h1 class="h1 text-white text-center">API - Clima</h1>
+        <h1 class="h1 text-white text-center">Clima - Capital</h1>
     </header>
     
     <main class="container mt-5 pt-5">
@@ -39,7 +44,7 @@
 
             <div class="row col-12 align-items-end centralizar">
                 <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3 centralizar">
-                    <div class="rounded p-4 text-white text-center cor-fundo sombra ativo" data-temperatura="card" data-prev="1">
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra " data-temperatura="card" data-prev="1">
                         <span class="my-2" data-temperatura="data">20/08</span>
                         <h2 class="h1 centralizar">
                             <img src="img/icone-temp.svg" alt="Icone temp">
