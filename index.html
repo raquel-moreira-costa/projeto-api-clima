@@ -33,19 +33,19 @@
                     </select>
                 </div>
             </form>
-            
-            <div class="centralizar col-12" data-animacao="caixa">
-                <span data-animacao="barrinha"></span>
-                <span data-animacao="barrinha"></span>
-                <span data-animacao="barrinha"></span>
-                <span data-animacao="barrinha"></span>
-                <span data-animacao="barrinha"></span>
-            </div>
 
             <div class="row col-12 align-items-end centralizar">
+                <div class="centralizar col-12" data-animacao="caixa">
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                </div>
+
                 <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3 centralizar">
-                    <div class="rounded p-4 text-white text-center cor-fundo sombra " data-temperatura="card" data-prev="1">
-                        <span class="my-2" data-temperatura="data">20/08</span>
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="1">
+                        <span class="mb-2" data-temperatura="data">20/08</span>
                         <h2 class="h1 centralizar">
                             <img src="img/icone-temp.svg" alt="Icone temp">
                             <span data-temperatura="temp">25 ºC</span>
@@ -56,7 +56,10 @@
                 
                 <div class="col-lg-4 col-md-9 col-12 order-lg-0 order-0 mb-3 centralizar ">
                     <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card">
-                        <span class="my-2" data-temperatura="data">20/08</span>
+                        <div class="centralizar sombra bg-white" data-temperatura="clima">
+                            <img class="img-fluid" src="img/climas/Sol.png" alt="Sol">
+                        </div>
+                        <span class="mb-2" data-temperatura="data">20/08</span>
                         <h1 class= "h1 centralizar" >
                             <img src="img/icone-temp.svg" alt="Icone temp">
                             <span data-temperatura="temp">25 ºC</span>
@@ -68,9 +71,9 @@
 
                 <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-1 mb-3 centralizar ">
                     <div class="rounded p-4  text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="0">
-                        <span class="my-lg-3 my-2" data-temperatura="data">20/08</span>
+                        <span class="my-lg-3 mb-2" data-temperatura="data">20/08</span>
                         <h2 class="h1 centralizar">
-                            <img src="img/icone-temp.svg" alt="Icone temp">
+                            <img src="img/icone-temp.svg" alt="Icone temperatura">
                             <span data-temperatura="temp">25 ºC</span>
                         </h2>
                         <span data-temperatura="vento">Vento: 20 km/h</span>
