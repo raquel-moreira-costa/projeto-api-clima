@@ -29,6 +29,10 @@ header h1 {
     text-transform: capitalize;
 }
 
+main {
+    min-height: 600px;
+}
+
 [data-temperatura="card"] {
     width: 280px;
     border: 2px solid;
@@ -124,6 +128,23 @@ header h1 {
     margin-left: 20px;
 }
 
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer li span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    footer li span {
+        font-size: 16px;
+    }
+}
+
 footer li span::after {
     content: "";
     width: 70px;
@@ -132,5 +153,3 @@ footer li span::after {
     background-color: currentColor;
     display: block;
 }
-
-
