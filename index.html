@@ -24,11 +24,11 @@
         <div class="row flex-column align-items-center">
             <form class="col-sm-6 col-9  mb-5 pb-5">
                 <div class="from-group">
-                    <select class="form-control sombra">
-                        <option selected>Selecione o estado...</option>
-                        <option value="1">São Paulo</option>
-                        <option value="2">Rio de Janeiro</option>
-                        <option value="3">Curitiba</option>
+                    <select class="form-control sombra" name="cidades" id="cidades">
+                        <option value="">Selecione o estado...</option>
+                        <option value="sao paulo">São Paulo</option>
+                        <option value="rio de janeiro">Rio de Janeiro</option>
+                        <option value="curitiba">Curitiba</option>
                     </select>
                 </div>
             </form>
@@ -76,6 +76,12 @@
                             <span data-temperatura="temp">25 ºC</span>
                         </h2>
                         <span data-temperatura="vento">Vento: 20 km/h</span>
+                    </div>
+
+                    <div data-temperatura="erro">
+
+                        <p class="col-10 text-center mx-auto alert alert-danger">Falha ao carregar os dados, eles podem não estar disponíveis no momento!</p>
+
                     </div>
                 </div>
             </div>

@@ -128,6 +128,16 @@ main {
     margin-left: 20px;
 }
 
+
+
+[data-temperatura="erro"]{
+    display:none;
+}
+
+[data-temperatura="erro"].ativo {
+    display: block;
+}
+
 footer {
     width: 100%;
     position: relative;
