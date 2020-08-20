@@ -10,7 +10,7 @@
     <script src="js/script.js" defer></script>
     <title>API - Clima</title>
 </head>
-<body class="quente frio">
+<body>
     <header class="p-2 cor-fundo sombra">
         <h1 class="h1 text-white text-center">API - Clima</h1>
     </header>
@@ -18,7 +18,7 @@
     <main class="container mt-5 pt-5">
         
         <div class="row flex-column align-items-center">
-            <form class="col-sm-6 col-9">
+            <form class="col-sm-6 col-9  mb-5 pb-5">
                 <div class="from-group">
                     <select class="form-control sombra">
                         <option selected>Selecione o estado...</option>
@@ -29,9 +29,17 @@
                 </div>
             </form>
             
-            <div class="row col-12 align-items-end mt-5 pt-5 centralizar">
-                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3 centralizar ">
-                    <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="1">
+            <div class="centralizar col-12" data-animacao="caixa">
+                <span data-animacao="barrinha"></span>
+                <span data-animacao="barrinha"></span>
+                <span data-animacao="barrinha"></span>
+                <span data-animacao="barrinha"></span>
+                <span data-animacao="barrinha"></span>
+            </div>
+
+            <div class="row col-12 align-items-end centralizar">
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3 centralizar">
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra ativo" data-temperatura="card" data-prev="1">
                         <span class="my-2" data-temperatura="data">20/08</span>
                         <h2 class="h1 centralizar">
                             <img src="img/icone-temp.svg" alt="Icone temp">
