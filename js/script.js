@@ -79,7 +79,7 @@ function definirCLima(descri) {
             imgCard.setAttribute("alt", "Sol");
         return "Sol";
         case "Clear":
-            imgCard.setAttribute("src", "img/climas/Sol-praia.png");
+            imgCard.setAttribute("src", "img/climas/sol-praia.png");
             imgCard.setAttribute("alt", "Limpo");
         return "Limpo";
         case "Patchy light rain with thunder":
