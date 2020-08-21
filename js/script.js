@@ -83,6 +83,7 @@ function definirCLima(descri) {
             imgCard.setAttribute("alt", "Limpo");
         return "Limpo";
         case "Patchy light rain with thunder":
+        case "Rain with thunderstorm":
             imgCard.setAttribute("src", "img/climas/Sol-com-pancada-de-chuva-forte.png");
             imgCard.setAttribute("alt", "Chuva forte com sol");
         return "Chuva forte com sol";
