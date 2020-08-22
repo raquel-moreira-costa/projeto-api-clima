@@ -67,6 +67,7 @@ function definirCLima(descri) {
     switch (descri) {
         case "Light drizzle, mist":
         case "Light rain":
+        case "Light rain, mist":
             imgCard.setAttribute("src", "img/climas/Chuva-fraca.png");
             imgCard.setAttribute("alt", "Chuva fraca");
         return "Chuva fraca";
@@ -84,6 +85,7 @@ function definirCLima(descri) {
         return "Limpo";
         case "Patchy light rain with thunder":
         case "Rain with thunderstorm":
+        case "Light rain with thunderstorm":
             imgCard.setAttribute("src", "img/climas/Sol-com-pancada-de-chuva-forte.png");
             imgCard.setAttribute("alt", "Chuva forte com sol");
         return "Chuva forte com sol";
