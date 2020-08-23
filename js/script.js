@@ -172,7 +172,7 @@ function fazerRequisicao (url, tituloCidade, valor) {
     })
     .catch((e) => {
         // Erros na busca
-        titulo.innerText = "Clima-Capital";
+        titulo.innerText = "Clima Brasil";
         body.className = "";
         ativarItem(erro);
     })
@@ -194,7 +194,7 @@ function buscarDados(elemento) {
     } else {
         desativarItem(erro);
         desativarItens(cards);
-        titulo.innerText = "Clima-Capital";
+        titulo.innerText = "Clima Brasil";
         body.className = "";
     }
 }

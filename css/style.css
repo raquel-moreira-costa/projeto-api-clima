@@ -146,8 +146,8 @@ footer {
 }
 
 footer li span {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 @media (max-width: 576px) {
@@ -156,11 +156,20 @@ footer li span {
     }
 }
 
-footer li span::after {
-    content: "";
-    width: 70px;
-    height: 2px;
-    margin: 10px auto;
-    background-color: currentColor;
-    display: block;
+footer li a::before {
+    content: "/";
+    margin: 0 10px 3px 5px;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    footer li a::before {
+        content: "";
+        width: 70px;
+        height: 2px;
+        margin: 16px auto;
+        background-color: currentColor;
+        display: block;
+    }
 }
