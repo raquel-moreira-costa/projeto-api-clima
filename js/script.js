@@ -7,7 +7,7 @@ const select = document.querySelector("#cidades");
 // Selecionar o body
 const body = document.body;
 // Selecionar o titulo principal
-const titulo = document.querySelector("header h1");
+const titulo = document.querySelector("main h1");
 
 // Ativa um item
 function ativarItem(item, classe = "ativo") {
@@ -172,7 +172,7 @@ function fazerRequisicao (url, tituloCidade, valor) {
     })
     .catch((e) => {
         // Erros na busca
-        titulo.innerText = "Clima Brasil";
+        titulo.innerText = "Busque pela temperatura!";
         body.className = "";
         ativarItem(erro);
     })
@@ -194,7 +194,7 @@ function buscarDados(elemento) {
     } else {
         desativarItem(erro);
         desativarItens(cards);
-        titulo.innerText = "Clima Brasil";
+        titulo.innerText = "Busque pela temperatura!";
         body.className = "";
     }
 }

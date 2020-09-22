@@ -25,7 +25,33 @@ body {
     background-color: #223;
 }
 
-header h1 {
+header h1 a:hover{
+    text-decoration: none;
+}
+
+header .menu ul{
+    height: 100%;
+    padding: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .menu ul li + li {
+    margin-left: 10px;
+}
+
+header .menu ul li a {
+    padding: 10px;
+    font-size: 18px;
+}
+
+header .menu ul li a.ativo {
+    text-decoration: underline;
+}
+
+main h1 {
     text-transform: capitalize;
 }
 
@@ -164,6 +190,23 @@ footer li a::before {
 
 
 @media (max-width: 768px) {
+    header h1 {
+        text-align: center;
+    }
+
+    header h1::after {
+        content: "";
+        width: 100px;
+        height: 2px;
+        margin: 5px auto;
+        background-color: currentColor;
+        display: block;
+    }
+
+    header .menu ul {
+        justify-content: center;
+    }
+
     footer li a::before {
         content: "";
         width: 70px;
