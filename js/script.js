@@ -187,7 +187,7 @@ function buscarDados(elemento) {
     const valor = elemento.value;
     
     if (valor !== "padrao") {        
-        const url = `https://goweather.herokuapp.com/weather/${valor}`;
+        const url = `http://localhost:3000/temperaturas/${valor}`;
         const tituloCidade = elemento.querySelector(`option[value="${valor}"]`).innerText;
         
         fazerRequisicao(url, tituloCidade, valor);
@@ -199,15 +199,35 @@ function buscarDados(elemento) {
     }
 }
 
-// Regasta o útlimo valor selecionado
-window.addEventListener("load", () => {
-    const dados = resgastarDados();
+async function carregarOpcoes() {
+    // Puxa todos os dados da API
+    const req = await fetch('http://localhost:3000/temperaturas/');
+    const dados = await req.json();
 
-    const opcao = select.querySelector(`option[value="${dados["valor"]}"]`);
+    // Percorre a lista de dados
+    for(dado of dados) {
+        // Cria um elemento html option
+        const op = document.createElement("option");
+        // Define o valor do option sendo o id do dado
+        op.setAttribute("value", dado.id);
+        // Define o texto que aparece no option
+        op.innerText = dado.nome;
+
+        // Adiciona o elemento criado dentro do select
+        select.appendChild(op);
+    }
+
+    // Isso aqui é pra resgastar os dados do localStorage
+    const dadosLocal = resgastarDados();
+    const opcao = select.querySelector(`option[value="${dadosLocal["valor"]}"]`);
+
     opcao.setAttribute("selected", "");
 
-    fazerRequisicao(dados["url"], dados["cidade"], dados["valor"]);
-});
+    fazerRequisicao(dadosLocal["url"], dadosLocal["cidade"], dadosLocal["valor"]);
+}
+
+// Regasta o útlimo valor selecionado
+window.addEventListener("load", carregarOpcoes);
 
 // Adicionar o evento para manipular dados
 select.addEventListener("change", () => buscarDados(select));
