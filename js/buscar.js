@@ -2,8 +2,6 @@
 const carregar = document.querySelector("[data-animacao='caixa']");
 const cards = document.querySelectorAll("[data-temperatura='card']");
 const erro = document.querySelector("[data-temperatura='erro']");
-// Selecionar select para controle
-const select = document.querySelector("#cidades");
 // Selecionar o body
 const body = document.body;
 // Selecionar o titulo principal
@@ -182,7 +180,7 @@ function fazerRequisicao (url, tituloCidade, valor) {
     });
 }
 
-// Busca os dados na API
+// Busca os dados na API e preenche o select
 function buscarDados(elemento) {
     const valor = elemento.value;
     
@@ -199,23 +197,8 @@ function buscarDados(elemento) {
     }
 }
 
-async function carregarOpcoes() {
-    // Puxa todos os dados da API
-    const req = await fetch('http://localhost:3000/temperaturas/');
-    const dados = await req.json();
-
-    // Percorre a lista de dados
-    for(dado of dados) {
-        // Cria um elemento html option
-        const op = document.createElement("option");
-        // Define o valor do option sendo o id do dado
-        op.setAttribute("value", dado.id);
-        // Define o texto que aparece no option
-        op.innerText = dado.nome;
-
-        // Adiciona o elemento criado dentro do select
-        select.appendChild(op);
-    }
+async function iniciar() {
+    await carregarOpcoes();
 
     // Isso aqui é pra resgastar os dados do localStorage
     const dadosLocal = resgastarDados();
@@ -226,8 +209,8 @@ async function carregarOpcoes() {
     fazerRequisicao(dadosLocal["url"], dadosLocal["cidade"], dadosLocal["valor"]);
 }
 
-// Regasta o útlimo valor selecionado
-window.addEventListener("load", carregarOpcoes);
+// Regasta o útlimo valor selecionado e preenche o select
+window.addEventListener("load", iniciar);
 
 // Adicionar o evento para manipular dados
 select.addEventListener("change", () => buscarDados(select));
