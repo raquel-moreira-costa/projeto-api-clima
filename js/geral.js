@@ -21,27 +21,24 @@ async function carregarOpcoes(campo) {
 // Aqui a gente vai criar uma função que vai pegar os valores dos campos e converter pra json, ok?
 
 function gerarJson(campo) {
+
     const dados = {
-        "nome": "Boa Vista",
-        "temperature": "35 °C",
-        "wind": "15 km/h",
-        "description": "Partly cloudy",
+        "nome": campo.querySelector("[name = 'nome']").value,
+        "temperature": `${campo.querySelector("[name='temperatura']").value}°C`,
+        "wind": `${campo.querySelector("[name='vento']").value} km/h`,
+        "description": campo.querySelector("[name='descricao']").value,
         "forecast": [
             {
                 "day": "1",
-                "temperature": "34 °C",
-                "wind": "15 km/h"
+                "temperature": `${campo.querySelector("[name='prev-1-temp']").value}°C`,
+                "wind": `${campo.querySelector("[name='prev-1-vento']").value} km/h`,
             },
             {
                 "day": "2",
-                "temperature": "33 °C",
-                "wind": "22 km/h"
+                "temperature": `${campo.querySelector("[name='prev-2-temp']").value}°C`,
+                "wind": `${campo.querySelector("[name='prev-2-vento']").value} km/h`,
             },
-            {
-                "day": "3",
-                "temperature": "33 °C",
-                "wind": "13 km/h"
-            }
         ]
     }
+    return JSON.stringify(dados);
 }
