@@ -2,6 +2,8 @@
 const carregar = document.querySelector("[data-animacao='caixa']");
 const cards = document.querySelectorAll("[data-temperatura='card']");
 const erro = document.querySelector("[data-temperatura='erro']");
+// Selecionar select para controle
+const select = document.querySelector("#cidades");
 // Selecionar o body
 const body = document.body;
 // Selecionar o titulo principal
@@ -198,7 +200,7 @@ function buscarDados(elemento) {
 }
 
 async function iniciar() {
-    await carregarOpcoes();
+    await carregarOpcoes(select);
 
     // Isso aqui é pra resgastar os dados do localStorage
     const dadosLocal = resgastarDados();

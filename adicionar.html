@@ -1,141 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Clima Brasil - Adicionar">
-    <meta property="og:description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Clima Brasil - Adicionar</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Clima Brasil - Adicionar">
+  <meta property="og:description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- JavaScript -->
+  <script src="js/geral.js" defer></script>
+  <script src="js/adicionar.js" defer></script>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>Clima Brasil - Adicionar</title>
 </head>
 <body>
-    <header class="p-2 cor-fundo sombra">
-        <div class="container">
-            <div class="row">
-                <h1 class=" col-md-6 col-12"><a href="index.html" class="h1 text-white">Clima Brasil</a></h1>
-                <nav class="menu col-md-6 col-12">
-                    <ul>
-                        <li><a href="index.html" class="text-white">Buscar</a></li>
-                        <li><a href="deletar.html" class="text-white">Deletar</a></li>
-                        <li><a href="adicionar.html" class="text-white ativo">Adicionar</a></li>
-                        <li><a href="atualizar.html" class="text-white">Atualizar</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-     <main class="container py-5">
-     <h1 class="text-white text-center mb-4">
-         Adicionar cidade
-     </h1>
-
-     <form class="row">
-           <div class="form-group col-md-4 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Id</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-           <div class="form-group col-md-4 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Nome</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-           <div class="form-group col-md-4 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Temperatura</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-           <div class="form-group col-md-4 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Vento</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-           <div class="form-group col-md-4 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Descrição</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-          </form>
-
-          <h4 class="text-white text-center">
-            1°Dia 
-           </h4>
-          <form class="row">
-           <div class="form-group col-md-6 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Temperatura</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-           <div class="form-group col-md-6 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Vento</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-          </form>
-
-          <h4 class="text-white text-center">
-            2°Dia
-           </h4>
-          <form class="row">
-           <div class="form-group col-md-6 col-12 mt-2">
-             <label class="text-light h5" for="exampleFormControlInput1">Temperatura</label>
-             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-           </div>
-           <div class="form-group col-md-6 col-12 mt-2">
-            <label class="text-light h5" for="exampleFormControlInput1">Vento</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          </form>
-
-          <h4 class="text-white text-center">
-            3°Dia
-          </h4>
-          <form class="row">
-          <div class="form-group col-md-6 col-12 mt-2">
-            <label class="text-light h5" for="exampleFormControlInput1">Temperatura</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <div class="form-group col-md-6 col-12 mt-2">
-            <label class="text-light h5" for="exampleFormControlInput1">Vento</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-         <div class="col-6">
-           <button type="submit" class="btn btn-secondary btn-lg">Enviar</button>
-         </div>
-         </form>
-
- </main>
-
-    <footer class="cor-fundo text-white p-4 text-center">
-        <h1 class="h4 p-2 mb-5">Consumo de API - Senai Suíço-Brasileira</h1>
-        <div class="container">
-            <ul class=" row  centralizar list-unstyled m-0">
-                <li class="col-lg-4 col-6 py-2">
-                    <span class="contribuidores">Paulo Henrique</span>
-                    <a href="https://github.com/henrique1204" class="text-white" target="_blank">Henrique1204</a>
-                </li>
-                <li class="col-lg-4 col-6 py-2">
-                    <span class="contribuidores">Julia Ágatha</span>
-                    <a href="https://github.com/agatha-juh" class="text-white" target="_blank">agatha-juh</a>
-                </li>
-                <li class="col-lg-4 col-6 py-2">
-                    <span class="contribuidores">Nicolas Moura</span>
-                    <a href="https://github.com/nicoringa" class="text-white" target="_blank">nicoringa</a>
-                </li>
-                <li class="col-lg-4 col-6 py-2">
-                    <span class="contribuidores">Geovanna Caserta</span>
-                    <a href="https://github.com/gkslima" class="text-white" target="_blank">gkslima</a>
-                </li>
-                <li class="col-lg-4 col-6 py-2">
-                    <span class="contribuidores">Mauricio C.</span>
-                    <a href="https://github.com/mauricio383" class="text-white" target="_blank">mauricio383</a>
-                </li>
-                <li class="col-lg-4 col-6 py-2">
-                    <span class="contribuidores">Raquel Moreira</span>
-                    <a href="https://github.com/RachMor" class="text-white h6" target="_blank">RachMor</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+  <header class="p-2 cor-fundo sombra">
+    <div class="container">
+      <div class="row">
+        <h1 class=" col-md-6 col-12"><a href="index.html" class="h1 text-white">Clima Brasil</a></h1>
+        <nav class="menu col-md-6 col-12">
+          <ul>
+            <li><a href="index.html" class="text-white">Buscar</a></li>
+            <li><a href="deletar.html" class="text-white">Deletar</a></li>
+            <li><a href="adicionar.html" class="text-white ativo">Adicionar</a></li>
+            <li><a href="atualizar.html" class="text-white">Atualizar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container py-5">
+    <h1 class="text-white text-center mb-4">Adicionar cidade</h1>
+    
+    <form id="adicionar" class="row">
+      <div class="form-group col-md-4 col-12 mt-2">
+        <label class="text-light h5" for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Ex: São Paulo">
+      </div>
+      
+      <div class="form-group col-md-4 col-12 mt-2">
+        <label class="text-light h5" for="descricao">Descrição</label>
+        <input type="text" class="form-control" id="descricao" placeholder="Ex: Ensolarado">
+      </div>
+      
+      <div class="form-group col-md-4 col-12 mt-2">
+        <label class="text-light h5" for="temperatura">Temperatura</label>
+        <input type="number" class="form-control" id="temperatura" value="0">
+      </div>
+      
+      <div class="form-group col-md-4 col-12 mt-2">
+        <label class="text-light h5" for="vento">Vento</label>
+        <input type="number" class="form-control" id="vento" value="0">
+      </div>
+      
+      <h2 class="h4 col-12 text-center text-white mt-3">1º dia</h2>
+      
+      <div class="form-group col-md-6 col-12 mt-2">
+        <label class="text-light h5" for="prev-1-temp">Temperatura</label>
+        <input type="number" class="form-control" id="prev-1-temp" value="0">
+      </div>
+      
+      <div class="form-group col-md-6 col-12 mt-2">
+        <label class="text-light h5" for="prev-1-vento">Vento</label>
+        <input type="number" class="form-control" id="prev-1-vento" value="0">
+      </div>
+      
+      <h2 class="h4 col-12 text-center text-white mt-3">2º dia</h2>
+      
+      <div class="form-group col-md-6 col-12 mt-2">
+        <label class="text-light h5" for="prev-2-temp">Temperatura</label>
+        <input type="number" class="form-control" id="prev-2-temp" value="0">
+      </div>
+      
+      <div class="form-group col-md-6 col-12 mt-2">
+        <label class="text-light h5" for="prev-2-vento">Vento</label>
+        <input type="number" class="form-control" id="prev-2-vento" value="0">
+      </div>
+      
+      <div class="col-12 mt-3">
+        <button type="submit" class="btn btn-secondary btn-lg d-block mx-auto">Adicionar cidade</button>
+      </div>
+    </form>
+  </main>
+  
+  <footer class="cor-fundo text-white p-4 text-center">
+    <h1 class="h4 p-2 mb-5">Consumo de API - Senai Suíço-Brasileira</h1>
+    <div class="container">
+      <ul class=" row  centralizar list-unstyled m-0">
+        <li class="col-lg-4 col-6 py-2">
+          <span class="contribuidores">Paulo Henrique</span>
+          <a href="https://github.com/henrique1204" class="text-white" target="_blank">Henrique1204</a>
+        </li>
+        <li class="col-lg-4 col-6 py-2">
+          <span class="contribuidores">Julia Ágatha</span>
+          <a href="https://github.com/agatha-juh" class="text-white" target="_blank">agatha-juh</a>
+        </li>
+        <li class="col-lg-4 col-6 py-2">
+          <span class="contribuidores">Nicolas Moura</span>
+          <a href="https://github.com/nicoringa" class="text-white" target="_blank">nicoringa</a>
+        </li>
+        <li class="col-lg-4 col-6 py-2">
+          <span class="contribuidores">Geovanna Caserta</span>
+          <a href="https://github.com/gkslima" class="text-white" target="_blank">gkslima</a>
+        </li>
+        <li class="col-lg-4 col-6 py-2">
+          <span class="contribuidores">Mauricio C.</span>
+          <a href="https://github.com/mauricio383" class="text-white" target="_blank">mauricio383</a>
+        </li>
+        <li class="col-lg-4 col-6 py-2">
+          <span class="contribuidores">Raquel Moreira</span>
+          <a href="https://github.com/RachMor" class="text-white h6" target="_blank">RachMor</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
