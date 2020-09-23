@@ -10,6 +10,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- JavaScript -->
+    <script src="js/geral.js" defer></script>
+    <script src="js/deletar.js" defer></script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
     <title>Clima Brasil - Deletar</title>
@@ -33,18 +36,20 @@
     
     <main class="container py-5 ">
         <h1 class="text-white text-center mb-4">Deletar Cidade</h1>
-        <form id="deletar" class="form-row">
-      <div class="form-group col-12">
-        <select class="form-control sombra" name="cidades" id="cidades">
-          <option value="">Selecione a cidade....</option>
-        </select>
-      </div>
-      <div class="col-12 mt-3">
-        <button type="submit" class="btn btn-secondary btn-lg mx-auto d-block">Deletar</button>
-      </div>
-    </form>
+        <div class="row justify-content-center">
+            <form id="deletar" class="row justify-content-center col-md-6 col-12">
+                <div class="form-group col-10">
+                    <select class="form-control sombra" name="cidades" id="cidades">
+                        <option value="">Selecione a cidade....</option>
+                    </select>
+                </div>
+                <div class="col-md-2 col-12">
+                    <button type="submit" class="btn btn-secondary d-block mx-auto">Deletar</button>
+                </div>
+            </form>
+        </div>
     </main>
-
+    
     <footer class="cor-fundo text-white p-4 text-center">
         <h1 class="h4 p-2 mb-5">Consumo de API - Senai Suíço-Brasileira</h1>
         <div class="container">
