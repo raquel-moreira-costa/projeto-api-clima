@@ -216,3 +216,7 @@ footer li a::before {
         display: block;
     }
 }
+
+.form-group {
+    width: 300 px;
+}
