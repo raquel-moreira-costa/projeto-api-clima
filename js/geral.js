@@ -1,3 +1,4 @@
+// Preenche os selects com as informações da API
 async function carregarOpcoes(campo) {
     // Puxa todos os dados da API
     const req = await fetch('http://localhost:3000/temperaturas/');
@@ -17,11 +18,9 @@ async function carregarOpcoes(campo) {
     }
 }
 
-// Arquivo geral.js
-// Aqui a gente vai criar uma função que vai pegar os valores dos campos e converter pra json, ok?
-
+// Gerar os dados para requisição POST e PUT
 function gerarJson(campo) {
-
+    // Estrutura de dados da API
     const dados = {
         "nome": campo.querySelector("[name = 'nome']").value,
         "temperature": `${campo.querySelector("[name='temperatura']").value}°C`,
@@ -40,5 +39,27 @@ function gerarJson(campo) {
             },
         ]
     }
+
+    // Retorna os dados no formado adequado
     return JSON.stringify(dados);
 }
+
+function validarInput(campo) {
+    let isValido = true;
+
+    campo.querySelectorAll("input").forEach((item) => {
+        if (!item.value) {
+            isValido = false;
+        }
+    });
+
+    return isValido;
+}
+
+document.querySelectorAll("[type='number']").forEach((item) => {
+    item.addEventListener("keydown", (e) => {
+        if(e.key.toLowerCase() === "e") {
+            e.preventDefault();
+        }
+    });
+});

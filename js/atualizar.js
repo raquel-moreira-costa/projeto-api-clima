@@ -9,7 +9,8 @@ window.addEventListener("load", () => {
 const form = document.querySelector("#atualizar");
 const btn = form.querySelector("button");
 
-select.addEventListener("change", (e) => {
+// Preenche os campos com valores da API
+function preencherCampos(e) {
     if (e.target.value !== "") {
         fetch(`http://localhost:3000/temperaturas/${e.target.value}`)
         .then((r) => r.json())
@@ -22,17 +23,17 @@ select.addEventListener("change", (e) => {
             replace(/\D/g, "");
 
 
-            const prev1 = json["forecast"][0]; // Primeiro item do array
-            const prev2 = json["forecast"][1]; // Segundo item do array
+            const prev1 = json["forecast"][0];
+            const prev2 = json["forecast"][1];
 
             form.querySelector("[name='prev-1-temp']").value = prev1["temperature"].
             replace(/\D/g, "");
-            form.querySelector("[name='prev-1-temp']").value = prev1["wind"].
+            form.querySelector("[name='prev-1-vento']").value = prev1["wind"].
             replace(/\D/g, "");
 
             form.querySelector("[name='prev-2-temp']").value = prev2["temperature"].
             replace(/\D/g, "");
-            form.querySelector("[name='prev-2-temp']").value = prev2["wind"].
+            form.querySelector("[name='prev-2-vento']").value = prev2["wind"].
             replace(/\D/g, "");
     })
     .catch((erro) => {console.log(erro)});
@@ -44,17 +45,21 @@ select.addEventListener("change", (e) => {
         const inputsNumero = form.querySelectorAll("[type='number']");
         inputsNumero.forEach((item) => {item.value = 0});
     }
-});
+} 
 
+select.addEventListener("change", preencherCampos);
 
+// Faz a requisição para o verbo PUT
 function atualizarDados(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:3000/temperaturas/${select.value}`, {
-        method: "PUT",
-        body: gerarJson(form),
-        headers: {"Content-type": "application/json; charset=UTF-8"}
-    }).catch((erro) => {console.log(erro)});
+    if (validarInput(form)) {
+        fetch(`http://localhost:3000/temperaturas/${select.value}`, {
+            method: "PUT",
+            body: gerarJson(form),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        }).catch((erro) => {console.log(erro)});
+    }
 }
 
 btn.addEventListener("click", atualizarDados);
